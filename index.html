@@ -61,7 +61,8 @@
 
                 <div class="row">
                     <label class="col-form-label">姓名：</label>
-                    <div><input type="text" readonly="" class="form-control-plaintext eudcFont" value="黃瀚陞"></div>
+                    <div><input type="text" readonly="" class="form-control-plaintext eudcFont"id="RanName"></div>
+                    
                 </div>
                 <div class="row">
                     <label class="col-form-label">系所或單位名稱：</label>
@@ -315,6 +316,7 @@
                 <h3 style="margin-top:20px;"><span style="color:red;">★</span>教職員請<a href="/Questionnaire/Daily"
                         style="color:#007bff; text-decoration: none; background-color: transparent;">填報健康狀況</a></h3>
             </div>
+            
 
 
 
@@ -324,8 +326,9 @@
         <div class="container">
             © 2020 - 輔仁大學自主健康管理平台 FJCU Self-Health Management Platform
             <span class="pl-5" style="color: #efefef;">v.20220517.001</span>
+         
         </div>
-
+      
 
     </footer>
     <script src="js/ShareFunctions.js"></script>
@@ -356,8 +359,17 @@
         var date = new Date().toLocaleDateString();
         console.log(date);
         document.getElementById('Today').innerHTML = date;
-        window.alert(date);
+        
+
+        
     </script>
+    <script type="text/javascript">
+        //隨機取得數組中的一個
+        var Arr = ["黃瀚陞","林冠佑","林能謙","陳靖堯","林啟豪","林秉佑","邁塊仁","繂硨仁"];
+        var n = Math.floor(Math.random() * Arr.length + 1)-1;
+        document.getElementById('RanName').value= (Arr[n]);
+    </script>
+
 </body>
 
 </html>
